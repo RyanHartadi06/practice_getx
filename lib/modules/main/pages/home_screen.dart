@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants/theme.dart';
-import '../widgets/articles_section.dart';
-import '../widgets/categories_section.dart';
-import '../widgets/popular_section.dart';
-import '../widgets/section_top.dart';
+import '../widgets/home_page/articles_section.dart';
+import '../widgets/home_page/categories_section.dart';
+import '../widgets/home_page/popular_section.dart';
+import '../widgets/home_page/section_top.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

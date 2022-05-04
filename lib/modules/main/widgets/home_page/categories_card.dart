@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/theme.dart';
+import '../../../../constants/theme.dart';
 
 class CategoriesCard extends StatelessWidget {
   const CategoriesCard({
