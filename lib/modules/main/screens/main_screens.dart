@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_7days/modules/main/controllers/home_controllers.dart';
 
 import '../../../constants/theme.dart';
 import '../controllers/main_controllers.dart';
@@ -28,6 +29,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   void initState() {
+    Get.put(HomeControllers());
     super.initState();
   }
 

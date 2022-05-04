@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:getx_7days/modules/main/models/berita_model.dart';
+import 'package:getx_7days/services/network_service.dart';
 
 class ArticlesCard extends StatelessWidget {
   const ArticlesCard({
     Key? key,
+    required this.berita,
   }) : super(key: key);
+
+  final Berita berita;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +23,8 @@ class ArticlesCard extends StatelessWidget {
             borderRadius: const BorderRadius.horizontal(
               left: Radius.circular(12),
             ),
-            child: Image.asset(
-              'assets/image/fullstack.png',
+            child: Image.network(
+              NetworkService.getImageUrl(berita.gambar),
               width: 100,
               fit: BoxFit.cover,
             ),
@@ -30,28 +35,28 @@ class ArticlesCard extends StatelessWidget {
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                SizedBox(
+              children: [
+                const SizedBox(
                   height: 12,
                 ),
                 Text(
-                  "How to: Work faster as Full Stack Designer",
-                  style: TextStyle(
+                  berita.judulBerita,
+                  style: const TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 6,
                 ),
                 Text(
-                  "UI Design",
-                  style: TextStyle(
+                  berita.deskripsi,
+                  style: const TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
               ],
